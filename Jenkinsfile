@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                build 'pipeline'
+                sh 'mvn install'
             }
         }
         stage('test') {
