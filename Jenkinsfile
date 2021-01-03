@@ -13,7 +13,7 @@ pipeline {
         }
         stage('test') {
             steps {
-                echo 'Testing the application'
+                junit allowEmptyResults: true, checksName: 'pipeline checks', testResults: '**/build/test-reports/*.xml'
             }
         }
         stage('deploy') {
