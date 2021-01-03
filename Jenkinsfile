@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('checkout') {
             steps {
-                echo 'cloning the repo into local server'
+                git 'https://github.com/mitreid-connect/simple-web-app.git'
             }
         }
         stage('Build') {
             steps {
-                echo 'Build the code into package'
+                build 'pipeline'
             }
         }
         stage('test') {
